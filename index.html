@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #main_container{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.89),rgba(128, 0, 128, 0.877));
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        #sub_container{
+            width: 40vw;
+            height: 62vh;
+            background-color: rgba(255, 255, 255, 0.075);
+            border: 2px solid black;
+            border-radius: 15px;
+            position: absolute;
+            left: 29%;
+            bottom: 13%;
+            border: none;
+            box-shadow: 10px 10px 10px black;
+            padding-top: 6vh;
+        }
+        #a{
+            width: 34vw;
+            height: 7vh;
+            background-color: rgb(247, 19, 247);
+            border-radius: 10px;
+            border: none;
+            color: black;
+            position: relative;
+            
+            left: 7%;
+            
+        }
+        input{
+            width: 5.2vw;
+            height: 6.5vh;
+            margin-right: 10%;
+            background-color: rgba(0, 0, 0, 0.644);
+            border-radius: 6px;
+            font-size: 28px;
+            color: rgb(247, 19, 247);
+            position: relative;
+            top: 20%;
+            left: 7%;
+            box-shadow: 5px 5px 10px black;
+        }
+        input:hover{
+            background-color: rgb(247, 19, 247);
+            color: black;
+        }
+        #clear{
+            width: 14.6vw;
+            height: 6.5vh;
+        }
+        #result{
+            width: 14.6vw;
+            height: 6.5vh;
+        }
+        #head1{
+            font-size: 1280%;
+            color: rgba(255, 255, 255, 0.733);
+            font-weight: bold;
+            position: relative;
+            top: 42vh;
+        }
+        #head2{
+            position: abolute;
+            font-size: 1280%;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            left: 0px;
+            top: 23vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="main_container">
+        <h1 id="head1">Calc</h1>
+    <div id="sub_container">
+        <h1 id="head2">ulator</h1>
+        <form name="cform">
+            <input id="a" type="text" name="answer">
+            <br><br>
+            <input type="button" value="1" onclick="cform.answer.value += '1'">
+            <input type="button" value="2" onclick="cform.answer.value += '2'">
+            <input type="button" value="3" onclick="cform.answer.value += '3'">
+            <input type="button" value="+" onclick="cform.answer.value += '+'">
+            <br><br>
+            <input type="button" value="4" onclick="cform.answer.value += '4'">
+            <input type="button" value="5" onclick="cform.answer.value += '5'">
+            <input type="button" value="6" onclick="cform.answer.value += '6'">
+            <input type="button" value="-" onclick="cform.answer.value += '-'">
+            <br><br>
+            <input type="button" value="7" onclick="cform.answer.value += '7'">
+            <input type="button" value="8" onclick="cform.answer.value += '8'">
+            <input type="button" value="9" onclick="cform.answer.value += '9'">
+            <input type="button" value="*" onclick="cform.answer.value += '*'">
+            <br><br>
+            <input type="button" value="/" onclick="cform.answer.value += '/'">
+            <input type="button" value="0" onclick="cform.answer.value += '0'">
+            <input type="button" value="." onclick="cform.answer.value += '.'">
+            <input type="button" value="%" onclick="cform.answer.value += '%'">
+            <br><br>
+            <input id="clear" type="button" value="clear" onclick="cform.answer.value = ' '">
+            <input id="result" type="button" value="=" onclick="cform.answer.value = eval(cform.answer.value)">
+        </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
